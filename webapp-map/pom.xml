@@ -42,6 +42,12 @@
             <artifactId>oskari-control-example</artifactId>
             <version>${oskari.version}</version>
         </dependency>
+             
+        <dependency>
+            <groupId>fi.nls.oskari.service</groupId>
+            <artifactId>oskari-search-nls</artifactId>
+            <version>${oskari.version}</version>
+        </dependency>
 
         <!-- support for user registration -->
         <dependency>
