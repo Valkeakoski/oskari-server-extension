@@ -44,6 +44,12 @@
         </dependency>
              
         <dependency>
+            <groupId>org.oskari</groupId>
+            <artifactId>control-userlayer</artifactId>
+            <version>${oskari.version}</version>
+        </dependency>
+             
+        <dependency>
             <groupId>fi.nls.oskari.service</groupId>
             <artifactId>oskari-search-nls</artifactId>
             <version>${oskari.version}</version>
