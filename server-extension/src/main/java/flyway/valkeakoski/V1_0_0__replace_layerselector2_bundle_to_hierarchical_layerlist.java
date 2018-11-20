@@ -1,4 +1,4 @@
-package valkeakoski;
+package flyway.valkeakoski;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,6 @@ import fi.nls.oskari.domain.map.view.Bundle;
 import fi.nls.oskari.domain.map.view.View;
 import fi.nls.oskari.log.LogFactory;
 import fi.nls.oskari.log.Logger;
-import fi.nls.oskari.util.FlywayHelper;
 import org.flywaydb.core.api.migration.jdbc.JdbcMigration;
 
 import fi.nls.oskari.map.view.ViewService;

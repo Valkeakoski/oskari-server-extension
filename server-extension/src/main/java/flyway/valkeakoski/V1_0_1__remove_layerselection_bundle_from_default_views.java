@@ -1,4 +1,4 @@
-package valkeakoski;
+package flyway.valkeakoski;
 
 
 import fi.nls.oskari.db.BundleHelper;
