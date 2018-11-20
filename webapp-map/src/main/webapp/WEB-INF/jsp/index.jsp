@@ -103,7 +103,7 @@
 <body>
 
 <nav id="maptools">
-    <div id="map-service-text" style="color:white;margin-left:16px;text-transform:uppercase;font-weight:bold;font-size:11px;">Valkeakosken karttapalvelu</div>
+    <div id="map-service-text" style="color:white;margin-left:16px;text-transform:uppercase;font-weight:bold;font-size:11px;margin-top: 16px;margin-bottom: 16px;border-left:2px solid #ff0000;padding-left:6px;">Valkeakosken karttapalvelu</div>
     <div id="loginbar">
     </div>
     <div id="menubar">
@@ -150,8 +150,8 @@
         </c:choose>
     </div>
     <div id="oskari-system-messages"></div>
-    <div id="map-service-logo" style="margin-left:16px;margin-top:16px;">
-        <a href="http://www.valkeakoski.fi" target="_blank"><img src="/images/vaakuna.png" style="height:80px;" alt="Valkeakosken vaakuna"/></a>
+    <div id="map-service-logo" style="margin-left:16px;margin-top:16px;height:50px;position:absolute;bottom:0px;">
+        <a href="http://www.valkeakoski.fi" target="_blank"><img src="/images/vaakuna.png" style="height:30px;" alt="Valkeakosken vaakuna"/></a>
     </div>
 </nav>
 <div id="contentMap" class="oskariui container-fluid">
