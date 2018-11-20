@@ -1,9 +1,12 @@
+<%@ page contentType="text/html; charset=UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MyApplication - ${viewName}</title>
-
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.7.2.min.js">
+    <title>Oskari - ${viewName}</title>
+    <script type="text/javascript" src="/Oskari/libraries/jquery/jquery-3.3.1.min.js">
     </script>
 
     <!-- ############# css ################# -->
@@ -86,6 +89,12 @@
                 color: #FFF;
                 padding: 5px;
             }
+            #oskari-system-messages {
+                bottom: 1em;
+                position: fixed;
+                display: table;
+                padding-left: 0.3em;
+            }
 
         }
     </style>
@@ -94,6 +103,7 @@
 <body>
 
 <nav id="maptools">
+    <div id="map-service-text" style="color:white;margin-left:16px;text-transform:uppercase;font-weight:bold;font-size:11px;">Valkeakosken karttapalvelu</div>
     <div id="loginbar">
     </div>
     <div id="menubar">
@@ -111,7 +121,12 @@
         <c:choose>
             <%-- If logout url is present - so logout link --%>
             <c:when test="${!empty _logout_uri}">
-                <a href="${pageContext.request.contextPath}${_logout_uri}"><spring:message code="logout" text="Logout" /></a>
+                <form action="${pageContext.request.contextPath}${_logout_uri}" method="POST" id="logoutform">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    <a href="${pageContext.request.contextPath}${_logout_uri}" onClick="jQuery('#logoutform').submit();return false;"><spring:message code="logout" text="Logout" /></a>
+                </form>
+                <%-- oskari-profile-link id is used by the personaldata bundle - do not modify --%>
+                <a href="${pageContext.request.contextPath}${_registration_uri}" id="oskari-profile-link"><spring:message code="account" text="Account" /></a>
             </c:when>
             <%-- Otherwise show appropriate logins --%>
             <c:otherwise>
@@ -121,13 +136,22 @@
                 <c:if test="${!empty _login_uri && !empty _login_field_user}">
                     <form action='${pageContext.request.contextPath}${_login_uri}' method="post" accept-charset="UTF-8">
                         <input size="16" id="username" name="${_login_field_user}" type="text" placeholder="<spring:message code="username" text="Username" />" autofocus
-                               required>
-                        <input size="16" id="password" name="${_login_field_pass}" type="password" placeholder="<spring:message code="password" text="Password" />" required>
-                        <input type="submit" id="submit" value="<spring:message code="login" text="Log in" />">
+                               required />
+                        <input size="16" id="password" name="${_login_field_pass}" type="password" placeholder="<spring:message code="password" text="Password" />" required />
+
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <input type="submit" id="submit" value="<spring:message code="login" text="Log in" />" />
                     </form>
+                </c:if>
+                <c:if test="${!empty _registration_uri}">
+                    <a href="${pageContext.request.contextPath}${_registration_uri}"><spring:message code="user.registration" text="Register" /></a>
                 </c:if>
             </c:otherwise>
         </c:choose>
+    </div>
+    <div id="oskari-system-messages"></div>
+    <div id="map-service-logo" style="margin-left:16px;margin-top:16px;">
+        <a href="http://www.valkeakoski.fi" target="_blank"><img src="/images/vaakuna.png" style="height:80px;" alt="Valkeakosken vaakuna"/></a>
     </div>
 </nav>
 <div id="contentMap" class="oskariui container-fluid">
@@ -167,7 +191,7 @@
             rel="stylesheet"
             type="text/css"
             href="/Oskari${path}/oskari.min.css"
-            />
+    />
     <%--language files --%>
     <script type="text/javascript"
             src="/Oskari${path}/oskari_lang_${language}.js">
