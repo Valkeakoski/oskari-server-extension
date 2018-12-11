@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Oskari - ${viewName}</title>
+    <title>Valkeakosken karttapalvelu</title>
     <script type="text/javascript" src="/Oskari/libraries/jquery/jquery-3.3.1.min.js">
     </script>
 
