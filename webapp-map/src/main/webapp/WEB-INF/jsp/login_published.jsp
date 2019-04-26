@@ -39,6 +39,7 @@
                 top: 1em;
                 right: 1em;
             }
+            
         }
     </style>
     <!-- ############# /css ################# -->
@@ -105,16 +106,3 @@
 <!-- ############# /Javascript ################# -->
 </body>
 </html>
-No commit comments for this range
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
