@@ -6,7 +6,7 @@
     <parent>
         <groupId>my.group</groupId>
         <artifactId>my.app</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.2.0</version>
     </parent>
     <artifactId>app-resources</artifactId>
     <packaging>jar</packaging>

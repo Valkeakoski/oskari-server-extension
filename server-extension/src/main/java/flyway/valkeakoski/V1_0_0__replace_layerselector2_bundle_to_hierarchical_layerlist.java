@@ -15,7 +15,7 @@ import fi.nls.oskari.log.Logger;
 import org.flywaydb.core.api.migration.jdbc.JdbcMigration;
 
 import fi.nls.oskari.map.view.ViewService;
-import fi.nls.oskari.map.view.ViewServiceIbatisImpl;
+import fi.nls.oskari.map.view.AppSetupServiceMybatisImpl;
 
 
 public class V1_0_0__replace_layerselector2_bundle_to_hierarchical_layerlist implements JdbcMigration {
@@ -28,7 +28,7 @@ public class V1_0_0__replace_layerselector2_bundle_to_hierarchical_layerlist imp
     private ViewService service = null;
 
     public void migrate(Connection connection) throws Exception {
-        service =  new ViewServiceIbatisImpl();
+        service =  new AppSetupServiceMybatisImpl();
         try {
             updateViews(connection);
         }
