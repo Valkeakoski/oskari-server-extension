@@ -20,6 +20,7 @@
         <slf4j.version>1.7.12</slf4j.version>
         <jackson.version>2.9.0</jackson.version>
         <log4j.version>2.11.1</log4j.version>
+        <geotools.version>19.2</geotools.version>
     </properties>
 
     <repositories>
@@ -32,6 +33,11 @@
             <id>oskari_org_snapshot</id>
             <name>Oskari.org snapshot repository</name>
             <url>http://oskari.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>boundless</id>
+            <name>Boundless Maven Repository</name>
+            <url>https://repo.boundlessgeo.com/main/</url>
         </repository>
     </repositories>
 

@@ -28,6 +28,13 @@
             <version>${project.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-metadata</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+
+
         <!-- Replace icu4j version included by axiom-api with newer version
         which does not brake .jar investigation performed by jetty-maven plugin  -->
         <dependency>
