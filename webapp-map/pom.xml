@@ -100,6 +100,14 @@
             <artifactId>service-logging</artifactId>
             <version>${oskari.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.oskari</groupId>
+            <artifactId>control-mvt</artifactId>
+            <version>${oskari.version}</version>
+        </dependency>
+
+
         <!-- /oskari -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
