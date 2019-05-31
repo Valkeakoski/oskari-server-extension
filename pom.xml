@@ -34,6 +34,11 @@
             <name>Oskari.org snapshot repository</name>
             <url>http://oskari.org/nexus/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>boundless</id>
+            <name>Boundless Maven Repository</name>
+            <url>https://repo.boundlessgeo.com/main/</url>
+        </repository>
     </repositories>
 
     <build>
