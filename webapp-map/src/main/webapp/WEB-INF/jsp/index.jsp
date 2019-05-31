@@ -142,7 +142,7 @@
         <div id="logos">
             <table>
                 <tr>
-                    <td style="width:33%;vertical-align:middle;">
+                    <td style="width:100%;vertical-align:middle;">
                         <div class="vaakuna_logo valkeakoski" onclick="window.open('http://www.valkeakoski.fi');" style="cursor:pointer;margin:auto;"></div>
                     </td>
                 </tr>
