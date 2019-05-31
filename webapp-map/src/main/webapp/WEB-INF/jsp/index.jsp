@@ -137,8 +137,17 @@
         </c:choose>
     </div>
     <div id="oskari-system-messages"></div>
-    <div id="map-service-logo" style="margin-left:16px;margin-top:16px;height:50px;position:absolute;bottom:0px;">
-        <a href="http://www.valkeakoski.fi" target="_blank"><img src="/images/vaakuna.png" style="height:30px;" alt="Valkeakosken vaakuna"/></a>
+
+    <div id="logosDiv">
+        <div id="logos">
+            <table>
+                <tr>
+                    <td style="width:33%;vertical-align:middle;">
+                        <div class="vaakuna_logo valkeakoski" onclick="window.open('http://www.valkeakoski.fi');" style="cursor:pointer;margin:auto;"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </nav>
 <div id="contentMap" class="oskariui container-fluid">
