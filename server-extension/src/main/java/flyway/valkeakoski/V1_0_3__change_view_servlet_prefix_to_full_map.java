@@ -30,8 +30,8 @@ public class V1_0_3__change_view_servlet_prefix_to_full_map implements JdbcMigra
     public void fixViewPrefix(Connection conn) throws SQLException {
         final String sql = "UPDATE portti_view " +
                 "SET " +
-                "    application='servlet' " +
-                "WHERE application = 'full-map'";
+                "    application='full-map' " +
+                "WHERE application = 'servlet'";
 
         try (PreparedStatement statement =
                      conn.prepareStatement(sql)){
