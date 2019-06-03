@@ -24,7 +24,7 @@ public class V1_0_5__change_search_bundle_config implements JdbcMigration {
     }
 
     public void changeConfig(Connection conn, long viewId) throws SQLException {
-        final String sql = "UPDATE portti_view " +
+        final String sql = "UPDATE portti_view_bundle_seq " +
                 "SET " +
                 "    config='{\"autocomplete\": false, \"disableDefault\": true}' " +
                 "WHERE bundle_id IN (SELECT id FROM portti_bundle WHERE name='search') AND view_id=?";
