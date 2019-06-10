@@ -41,24 +41,26 @@ public class V1_0_8__add_track_location_and_search_from_channels_to_user_saved_v
             // Change mylocationplugin conf to user views
             View view = APP_SETUP_SERVICE.getViewWithConf(v.getId());
             final Bundle mapfull = v.getBundleByName(BUNDLE_MAPFULL);
-            final JSONObject config = mapfull.getConfigJSON();
-            final JSONArray plugins = config.optJSONArray("plugins");
-            for (int i = 0; i < plugins.length(); ++i) {
-                final JSONObject plugin = plugins.getJSONObject(i);
-                if (MY_LOCATION_PLUGIN.equals(plugin.optString("id"))) {
-                    final JSONObject pluginConfig = plugin.optJSONObject("config");
-                    if (pluginConfig != null) {
-                        pluginConfig.remove("zoom");
-                        pluginConfig.put("zoom", 10);
-                        break;
-                    } else {
-                        JSONObject configJSON = new JSONObject();
-                        configJSON.put("zoom", 10);
-                        plugin.put("config", configJSON);
+            if (mapfull != null) {
+                final JSONObject config = mapfull.getConfigJSON();
+                final JSONArray plugins = config.optJSONArray("plugins");
+                for (int i = 0; i < plugins.length(); ++i) {
+                    final JSONObject plugin = plugins.getJSONObject(i);
+                    if (MY_LOCATION_PLUGIN.equals(plugin.optString("id"))) {
+                        final JSONObject pluginConfig = plugin.optJSONObject("config");
+                        if (pluginConfig != null) {
+                            pluginConfig.remove("zoom");
+                            pluginConfig.put("zoom", 10);
+                            break;
+                        } else {
+                            JSONObject configJSON = new JSONObject();
+                            configJSON.put("zoom", 10);
+                            plugin.put("config", configJSON);
+                        }
                     }
                 }
+                APP_SETUP_SERVICE.updateBundleSettingsForView(v.getId(), mapfull);
             }
-            APP_SETUP_SERVICE.updateBundleSettingsForView(v.getId(), mapfull);
 
 
         }
