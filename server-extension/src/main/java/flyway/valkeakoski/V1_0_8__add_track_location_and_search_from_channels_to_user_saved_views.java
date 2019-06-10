@@ -79,7 +79,7 @@ public class V1_0_8__add_track_location_and_search_from_channels_to_user_saved_v
 
 
     private List<View> getUserViews(Connection connection) throws SQLException {
-        final String sql = "SELECT SELECT id FROM portti_view WHERE type='USER'";
+        final String sql = "SELECT id FROM portti_view WHERE type='USER'";
         List<View> views = new ArrayList<>();
         try (final PreparedStatement statement =
                      connection.prepareStatement(sql);
