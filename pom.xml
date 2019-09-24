@@ -3,14 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>my.group</groupId>
-    <artifactId>my.app</artifactId>
+    <groupId>kartat.vlk.fi</groupId>
+    <artifactId>sesrver-extension</artifactId>
     <version>1.2.0</version>
     <packaging>pom</packaging>
     <name>Valkeakoski Oskari</name>
 
     <properties>
-        <oskari.version>1.52.0</oskari.version>
+        <oskari.version>1.53.0</oskari.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -27,12 +27,12 @@
         <repository>
             <id>oskari_org</id>
             <name>Oskari.org release repository</name>
-            <url>http://oskari.org/nexus/content/repositories/releases/</url>
+            <url>https://oskari.org/nexus/content/repositories/releases/</url>
         </repository>
         <repository>
             <id>oskari_org_snapshot</id>
             <name>Oskari.org snapshot repository</name>
-            <url>http://oskari.org/nexus/content/repositories/snapshots/</url>
+            <url>https://oskari.org/nexus/content/repositories/snapshots/</url>
         </repository>
         <repository>
             <id>boundless</id>
@@ -67,7 +67,6 @@
         <module>app-resources</module>
         <module>server-extension</module>
         <module>webapp-map</module>
-        <module>webapp-transport</module>
     </modules>
 
 </project>
