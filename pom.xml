@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>kartat.vlk.fi</groupId>
-    <artifactId>server-extension</artifactId>
+    <artifactId>oskari-extension</artifactId>
     <version>1.2.0</version>
     <packaging>pom</packaging>
     <name>Valkeakoski Oskari</name>
@@ -23,6 +23,18 @@
         <geotools.version>19.2</geotools.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>fi.nls.oskari</groupId>
+                <artifactId>oskari-parent</artifactId>
+                <version>${oskari.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <repositories>
         <repository>
             <id>oskari_org</id>
@@ -38,6 +50,11 @@
             <id>boundless</id>
             <name>Boundless Maven Repository</name>
             <url>https://repo.boundlessgeo.com/main/</url>
+        </repository>
+        <repository>
+            <id>osgeo</id>
+            <name>Open Source Geospatial Foundation Repository</name>
+            <url>http://download.osgeo.org/webdav/geotools/</url>
         </repository>
     </repositories>
 

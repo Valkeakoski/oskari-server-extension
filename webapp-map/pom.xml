@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>kartat.vlk.fi</groupId>
-        <artifactId>server-extension</artifactId>
+        <artifactId>oskari-extension</artifactId>
         <version>1.2.0</version>
     </parent>
 
@@ -18,12 +18,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>my.group</groupId>
+            <groupId>kartat.vlk.fi</groupId>
             <artifactId>app-resources</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>my.group</groupId>
+            <groupId>kartat.vlk.fi</groupId>
             <artifactId>server-extension</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -114,11 +114,13 @@
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>${log4j.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
             <version>${commons-dbcp2.version}</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.postgresql</groupId>
