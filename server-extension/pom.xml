@@ -14,21 +14,18 @@
         <dependency>
             <groupId>fi.nls.oskari.service</groupId>
             <artifactId>oskari-control-base</artifactId>
-            <version>${oskari.version}</version>
         </dependency>
-	    
-	<dependency>
+
+	    <dependency>
             <groupId>fi.nls.oskari.service</groupId>
             <artifactId>oskari-control-users</artifactId>
-            <version>${oskari.version}</version>
         </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-		
+
     </dependencies>
 </project>
